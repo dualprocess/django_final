@@ -1,0 +1,39 @@
+{% extends "admin/base.html" %}
+{% load static %}
+    <link href="{% static 'external.css' %}" rel="stylesheet">
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block extrastyle %}
+<style>
+/**    body {
+        background: #4ac1f7;
+    }
+
+    h1 {
+        color: #006b1b;
+    }
+
+    #header {
+        background: #993300;
+    }
+
+    #branding {
+        width: 120%;
+    }
+
+    #site-name{
+        float: right;
+    } **/
+</style>
+{% endblock %}
+{% block branding %}
+
+
+	  <a class="logo-top" href="http://127.0.0.1:8000/admin">
+	    <img src="{% static 'img/Logo.png' %}" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+	    Brand Name
+	  </a>
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
